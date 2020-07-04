@@ -98,13 +98,13 @@ variable "lb_name" {
 }
 
 variable "run_list_bastion" {
-  default = ""
+  default = "sleep 60; "
 }
 
 variable "run_list_nginx" {
-  default = ""
+  default = "sleep 60; sudo yum install nginx"
 }
 
 variable "run_list_apache" {
-  default = ""
+  default = "sleep 60; sudo yum install apache"
 }
