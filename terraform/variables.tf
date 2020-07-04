@@ -102,7 +102,7 @@ variable "run_list_bastion" {
 }
 
 variable "run_list_nginx" {
-  default = "sleep 60; sudo yum install -y nginx; sudo systemctl enable nginx; sudo systemctl start nginx"
+  default = "sleep 60; sudo yum install -y epel-release; sudo yum install -y nginx; sudo systemctl enable nginx; sudo systemctl start nginx"
 }
 
 variable "run_list_apache" {
