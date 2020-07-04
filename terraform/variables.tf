@@ -91,3 +91,14 @@ variable "lb_name" {
   default = "devops-alb"
 }
 
+variable "run_list_bastion" {
+  default = ""
+}
+
+variable "run_list_nginx" {
+  default = ""
+}
+
+variable "run_list_apache" {
+  default = ""
+}
