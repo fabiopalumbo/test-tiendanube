@@ -1,5 +1,6 @@
 # test-tiendanube
-Technical Test
+
+##Technical Test
 
 ```
 DevOps Test
@@ -28,3 +29,18 @@ How will we evaluate your test?
 We will replicate your stack into our testing AWS region.
 We will evaluate quaity of your code as well as best practices and organization.
 ```
+
+## Requirement
+* AWS Free Tier Account 
+* Jenkins
+* Terraform => v.011
+* For Terratest --> Go v0.12
+
+## AWS Architecture
+![alt text](/images/TiendaNube.png "AWS diagram")
+
+## Jenkins Automation
+![alt text](/images/TiendaNube_terratest.png "AWS diagram")
+
+## Terratest
+[WIP]
