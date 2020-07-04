@@ -33,8 +33,14 @@ We will evaluate quaity of your code as well as best practices and organization.
 ## Requirement
 * AWS Free Tier Account 
 * Jenkins
-* Terraform => v.011
-* For Terratest --> Go v0.12
+* Terraform => v0.11
+* For Terratest --> Go v0.13
+
+### Constrains
+* Replace key_name with your current pem
+* Replace Route 53 Azone ID
+* Replace Domain Name with your current domain
+* Replace SSL arn with current 
 
 ## AWS Architecture
 ![alt text](/images/TiendaNube.png "AWS diagram")
