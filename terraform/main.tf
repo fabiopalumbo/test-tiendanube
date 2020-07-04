@@ -153,15 +153,15 @@ module "nginx" {
  vpc_prefix = "${var.vpc_prefix}"
  run_list = "${var.run_list}"
  key_name = "${aws_key_pair.auth_key_pair.id}"
- chef_key = "${var.chef_key}"
- chef_user = "${var.chef_user}"
+ aws_region = "${var.aws_region}" 
  aws_amis = "${var.aws_amis}"
  vpc_name = "${var.vpc_name}"
  public_key = "${var.public_key}"
- chef_environment = "${var.chef_environment}"
- aws_region = "${var.aws_region}"
- chef_server_url = "${var.chef_server_url}"
- bastion_ip = "${module.bastion.bastion_public_ip}"
+ #chef_key = "${var.chef_key}"
+ #chef_user = "${var.chef_user}"
+ #chef_environment = "${var.chef_environment}" 
+ #chef_server_url = "${var.chef_server_url}"
+ #bastion_ip = "${module.bastion.bastion_public_ip}"
 }
 
 module "apache" {
@@ -177,15 +177,15 @@ module "apache" {
  vpc_prefix = "${var.vpc_prefix}"
  run_list = "${var.run_list}"
  key_name = "${aws_key_pair.auth_key_pair.id}"
- chef_key = "${var.chef_key}"
- chef_user = "${var.chef_user}"
  aws_amis = "${var.aws_amis}"
  vpc_name = "${var.vpc_name}"
  public_key = "${var.public_key}"
- chef_environment = "${var.chef_environment}"
  aws_region = "${var.aws_region}"
- chef_server_url = "${var.chef_server_url}"
- bastion_ip = "${module.bastion.bastion_public_ip}"
+ #chef_key = "${var.chef_key}"
+ #chef_user = "${var.chef_user}"
+ #chef_environment = "${var.chef_environment}" 
+ #chef_server_url = "${var.chef_server_url}"
+ #bastion_ip = "${module.bastion.bastion_public_ip}"
 }
 
 
