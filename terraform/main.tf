@@ -245,7 +245,7 @@ module "nginx-tg" {
  tg_ip       = "instance"
  healthcheck_path = "/nexus"
  listener_arn = "${module.devops-alb.frontend_listener}"
- tg_instanceid ="${module.nexus.instance_id}" 
+ tg_instanceid ="${module.nginx.instance_id}" 
  host_header  = "nginx.${var.project}.test.com"
  log_group_name = "nginx-alb-log"
  tags = {
