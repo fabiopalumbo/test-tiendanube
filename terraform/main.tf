@@ -193,7 +193,7 @@ module "apache" {
  ami_id = "${var.ami_id}"
  project = "${var.project}"
  vpc_prefix = "${var.vpc_prefix}"
- run_list = "${var.run_list}"
+ run_list = "${var.run_list_apache}"
  key_name = "${aws_key_pair.auth_key_pair.id}"
  aws_amis = "${var.aws_amis}"
  vpc_name = "${var.vpc_name}"
