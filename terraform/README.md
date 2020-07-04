@@ -1,14 +1,13 @@
 # Basic Two-Tier AWS Architecture
 
 This provides a template for running a simple two-tier architecture on Amazon
-Web services. The premise is that you have stateless app servers running behind
+Web services. 
+
+The premise is that you have stateless app servers running behind
 an ELB serving traffic.
 
 To simplify the example, this intentionally ignores deploying and
-getting your application onto the servers. However, you could do so either via
-[provisioners](https://www.terraform.io/docs/provisioners/) and a configuration
-management tool, or by pre-baking configured AMIs with
-[Packer](http://www.packer.io).
+getting your application onto the servers. 
 
 This example will also create a new EC2 Key Pair in the specified AWS Region. 
 The key name and path to the public key must be specified via the  
