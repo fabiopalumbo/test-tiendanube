@@ -179,7 +179,7 @@ module "nginx" {
  #chef_user = "${var.chef_user}"
  #chef_environment = "${var.chef_environment}" 
  #chef_server_url = "${var.chef_server_url}"
- #bastion_ip = "${module.bastion.bastion_public_ip}"
+ bastion_ip = "${module.bastion.bastion_public_ip}"
 }
 
 module "apache" {
@@ -203,7 +203,7 @@ module "apache" {
  #chef_user = "${var.chef_user}"
  #chef_environment = "${var.chef_environment}" 
  #chef_server_url = "${var.chef_server_url}"
- #bastion_ip = "${module.bastion.bastion_public_ip}"
+ bastion_ip = "${module.bastion.bastion_public_ip}"
 }
 
 
