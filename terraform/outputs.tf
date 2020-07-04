@@ -1,10 +1,9 @@
 output "nginx_ip" {
-          value = "${module.nginxs.private_ip}"
+          value = "${module.nginx.private_ip}"
 }
 output "apache_ip" {
           value = "${module.apache.private_ip}"
 }
-
 output "vpc_id" {
 	  value = "${aws_vpc.infra-vpc.id}"
 }
