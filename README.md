@@ -42,6 +42,10 @@ We will evaluate quaity of your code as well as best practices and organization.
 * Replace Domain Name with your current domain
 * Replace SSL arn with current 
 
+## Improvement tbd
+* S3 Backend with State Lock
+* Puppet / Ansible recipie for EC2 Configuration
+
 ## AWS Architecture
 ![alt text](/images/TiendaNube.png "AWS diagram")
 
