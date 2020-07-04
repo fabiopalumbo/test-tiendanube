@@ -1,9 +1,9 @@
 variable "public_key" {}
 variable "private_key_path" {}
-variable "chef_key" {}
-variable "chef_server_url" {}
-variable "chef_environment" {}
-variable "chef_user" {}
+#variable "chef_key" {}
+#variable "chef_server_url" {}
+#variable "chef_environment" {}
+#variable "chef_user" {}
 variable "key_name" {}
 variable "aws_region" {}
 variable "vpc_id" {}
