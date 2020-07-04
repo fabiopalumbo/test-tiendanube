@@ -239,7 +239,7 @@ module "nginx-tg" {
  source = "./modules/service-networking"
  vpc_id = "${aws_vpc.infra-vpc.id}"
 
- tg_name     = "${var.project}-${var.vpc_prefix}-nexus-tg"
+ tg_name     = "${var.project}-${var.vpc_prefix}-nginx-tg"
  tg_port     = "8081"
  tg_protocol = "HTTP"
  tg_ip       = "instance"
@@ -257,7 +257,7 @@ module "apache-tg" {
  source = "./modules/service-networking"
  vpc_id = "${aws_vpc.infra-vpc.id}"
 
- tg_name     = "${var.project}-${var.vpc_prefix}-jenkins-tg"
+ tg_name     = "${var.project}-${var.vpc_prefix}-apache-tg"
  tg_port     = "8080"
  tg_protocol = "HTTP"
  tg_ip       = "instance"
