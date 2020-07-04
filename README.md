@@ -50,11 +50,6 @@ We will evaluate quaity of your code as well as best practices and organization.
 
 ## Terratest
 ```
-Refreshing Terraform state in-memory prior to plan...
-The refreshed state will be used to calculate this plan, but will not be
-persisted to local or remote state storage.
-
-
 ------------------------------------------------------------------------
 
 An execution plan has been generated and is shown below.
@@ -247,7 +242,7 @@ Terraform will perform the following actions:
 
   + module.apache-tg.aws_alb_target_group_attachment.lb_target_group
       id:                                                <computed>
-      port:                                              "8080"
+      port:                                              "80"
       target_group_arn:                                  "${aws_lb_target_group.lb_target_group.arn}"
       target_id:                                         "${var.tg_instanceid}"
 
@@ -297,7 +292,7 @@ Terraform will perform the following actions:
       lambda_multi_value_headers_enabled:                "false"
       load_balancing_algorithm_type:                     <computed>
       name:                                              "demo-infra-apache-tg"
-      port:                                              "8080"
+      port:                                              "80"
       protocol:                                          "HTTP"
       proxy_protocol_v2:                                 "false"
       slow_start:                                        "0"
@@ -327,7 +322,7 @@ Terraform will perform the following actions:
       get_password_data:                                 "false"
       host_id:                                           <computed>
       instance_state:                                    <computed>
-      instance_type:                                     "t3.large"
+      instance_type:                                     "t2.micro"
       ipv6_address_count:                                <computed>
       ipv6_addresses.#:                                  <computed>
       key_name:                                          "${var.key_name}"
@@ -575,7 +570,7 @@ Terraform will perform the following actions:
 
   + module.nginx-tg.aws_alb_target_group_attachment.lb_target_group
       id:                                                <computed>
-      port:                                              "8081"
+      port:                                              "80"
       target_group_arn:                                  "${aws_lb_target_group.lb_target_group.arn}"
       target_id:                                         "${var.tg_instanceid}"
 
@@ -617,7 +612,7 @@ Terraform will perform the following actions:
       health_check.0.healthy_threshold:                  "2"
       health_check.0.interval:                           "30"
       health_check.0.matcher:                            "200,302"
-      health_check.0.path:                               "/nexus"
+      health_check.0.path:                               "/"
       health_check.0.port:                               "traffic-port"
       health_check.0.protocol:                           "HTTP"
       health_check.0.timeout:                            <computed>
@@ -625,7 +620,7 @@ Terraform will perform the following actions:
       lambda_multi_value_headers_enabled:                "false"
       load_balancing_algorithm_type:                     <computed>
       name:                                              "demo-infra-nginx-tg"
-      port:                                              "8081"
+      port:                                              "80"
       protocol:                                          "HTTP"
       proxy_protocol_v2:                                 "false"
       slow_start:                                        "0"
@@ -655,7 +650,7 @@ Terraform will perform the following actions:
       get_password_data:                                 "false"
       host_id:                                           <computed>
       instance_state:                                    <computed>
-      instance_type:                                     "t3.large"
+      instance_type:                                     "t2.micro"
       ipv6_address_count:                                <computed>
       ipv6_addresses.#:                                  <computed>
       key_name:                                          "${var.key_name}"
@@ -744,5 +739,6 @@ Plan: 34 to add, 0 to change, 0 to destroy.
 Note: You didn't specify an "-out" parameter to save this plan, so Terraform
 can't guarantee that exactly these actions will be performed if
 "terraform apply" is subsequently run.
+
 
 ```
