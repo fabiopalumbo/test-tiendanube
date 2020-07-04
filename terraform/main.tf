@@ -184,7 +184,7 @@ module "nginx" {
 
 module "apache" {
  source = "./modules/ec2"
- service_name = "sonarqube"
+ service_name = "apache"
  vpc_id = "${aws_vpc.infra-vpc.id}"
  subnet_id = "${aws_subnet.app-az1a-subnet.id}"
  sg_id = "${module.whitelist-sg.sg_id}"
