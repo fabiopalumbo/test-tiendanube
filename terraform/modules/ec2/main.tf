@@ -47,7 +47,7 @@ resource "aws_instance" "ec2" {
 
   provisioner "remote-exec" {
     inline = [
-      "sleep 180; sudo /usr/sbin/setenforce 0;"
+      "${var.run_list}"
 
     ]
     connection {
