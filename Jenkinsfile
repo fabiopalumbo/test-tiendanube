@@ -34,7 +34,7 @@ pipeline {
 
                 echo "Testing Orchestation with Terratest"
                 sh '''
-                  cd terraform
+                  cd terraform/test
                   go mod init test.com/v1
                   go mod download                
                   go test -v
