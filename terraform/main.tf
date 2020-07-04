@@ -139,6 +139,24 @@ resource "aws_key_pair" "auth_key_pair" {
 
 # EC2
 ###################################################################
+module "bastion" {
+ source = "./modules/bastion"
+ service_name = "bastion"
+ vpc_id = "${aws_vpc.infra-vpc.id}"
+ subnet_id = "${aws_subnet.web-az1a-subnet.id}"
+ sg_id = "${module.whitelist-sg.sg_id}"
+ private_key_path = "${var.private_key_path}"
+ aws_instance_type = "${var.aws_instance_type}"
+ ami_id = "${var.ami_id}"
+ project = "${var.project}"
+ vpc_prefix = "${var.vpc_prefix}"
+ run_list = "${var.run_list}"
+ key_name = "${aws_key_pair.auth_key_pair.id}"
+ aws_amis = "${var.aws_amis}"
+ vpc_name = "${var.vpc_name}"
+ public_key = "${var.public_key}"
+ aws_region = "${var.aws_region}"
+}
 
 module "nginx" {
  source = "./modules/ec2"
