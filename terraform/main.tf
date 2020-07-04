@@ -240,10 +240,10 @@ module "nginx-tg" {
  vpc_id = "${aws_vpc.infra-vpc.id}"
 
  tg_name     = "${var.project}-${var.vpc_prefix}-nginx-tg"
- tg_port     = "8081"
+ tg_port     = "80"
  tg_protocol = "HTTP"
  tg_ip       = "instance"
- healthcheck_path = "/nexus"
+ healthcheck_path = "/"
  listener_arn = "${module.devops-alb.frontend_listener}"
  tg_instanceid ="${module.nginx.instance_id}" 
  host_header  = "nginx.${var.project}.test.com"
@@ -258,7 +258,7 @@ module "apache-tg" {
  vpc_id = "${aws_vpc.infra-vpc.id}"
 
  tg_name     = "${var.project}-${var.vpc_prefix}-apache-tg"
- tg_port     = "8080"
+ tg_port     = "80"
  tg_protocol = "HTTP"
  tg_ip       = "instance"
  healthcheck_path = "/"
