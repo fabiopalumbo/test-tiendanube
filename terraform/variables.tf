@@ -5,55 +5,55 @@ variable "public_key" {
 
 variable "key_name" {
   default = "my-east-1"
-}  
+}
 
 variable "aws_region" {
-  default = "us-east-1"
+  default     = "us-east-1"
   description = ""
 }
 
 variable "az_suffix_1" {
-  default = "a"
+  default     = "a"
   description = ""
 }
 
 variable "az_suffix_2" {
-  default = "b"
+  default     = "b"
   description = ""
 }
 
 variable "aws_vpc_cidr" {
-  description 	= "aws vpc cidr"
-  default	= "10.200.0.0/16"
+  description = "aws vpc cidr"
+  default     = "10.200.0.0/16"
 }
 
 variable "web-az1a-subnet-cidr" {
-  description   = "web-az1a-subnet-cidr"
-  default       = "10.200.0.0/27"
+  description = "web-az1a-subnet-cidr"
+  default     = "10.200.0.0/27"
 }
 
 variable "web-az1b-subnet-cidr" {
-  description   = "web-az1b-subnet-cidr"
-  default       = "10.200.0.32/27"
+  description = "web-az1b-subnet-cidr"
+  default     = "10.200.0.32/27"
 }
 
 variable "app-az1a-subnet-cidr" {
-  description   = "web-az1a-subnet-cidr"
-  default       = "10.200.0.64/27"
+  description = "web-az1a-subnet-cidr"
+  default     = "10.200.0.64/27"
 }
 
 variable "app-az1b-subnet-cidr" {
-  description   = "web-az1b-subnet-cidr"
-  default       = "10.200.0.96/27"
+  description = "web-az1b-subnet-cidr"
+  default     = "10.200.0.96/27"
 }
 
 variable "web-alb-name" {
-  description   = "web-alb-name"
-  default       = "devops-alb"
+  description = "web-alb-name"
+  default     = "devops-alb"
 }
 
 variable "front_end_client_listener_certificate_arn" {
- default       = "arn:aws:acm:us-east-1:1234:certificate/1234"
+  default = "arn:aws:acm:us-east-1:1234:certificate/1234"
 }
 
 # Ubuntu Precise 12.04 LTS (x64)
@@ -67,20 +67,21 @@ variable "aws_amis" {
 }
 
 variable "vpc_name" {
-  default = "infra-vpc"
+  default     = "infra-vpc"
   description = ""
 }
 
 variable "vpc_prefix" {
-  default = "infra"
+  default     = "infra"
   description = ""
 }
+
 variable "project" {
   default = "demo"
 }
 
 variable "private_key_path" {
-  default = "~/.ssh/my-east1.pem"
+  default     = "~/.ssh/my-east1.pem"
   description = ""
 }
 
@@ -89,7 +90,7 @@ variable "aws_instance_type" {
 }
 
 variable "ami_id" {
-  default = "ami-c998b6b2"
+  default     = "ami-c998b6b2"
   description = ""
 }
 
@@ -108,3 +109,4 @@ variable "run_list_nginx" {
 variable "run_list_apache" {
   default = "sleep 60 && sudo yum update && sudo yum install -y httpd && sudo systemctl enable httpd && sudo systemctl start httpd"
 }
+
