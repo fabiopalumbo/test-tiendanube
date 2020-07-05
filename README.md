@@ -46,6 +46,11 @@ We will evaluate quaity of your code as well as best practices and organization.
 ## Improvement tbd
 * S3 Backend with State Lock
 * Puppet / Ansible recipie for EC2 Configuration
+* Terraform v0.12
+
+```
+terraform 0.12upgrade
+```
 
 ## AWS Architecture
 ![alt text](/images/TiendaNube.png "AWS diagram")
