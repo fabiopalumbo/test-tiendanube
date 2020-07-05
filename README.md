@@ -38,7 +38,8 @@ We will evaluate quaity of your code as well as best practices and organization.
 
 ### Constrains
 * Replace key_name with your current pem
-* Replace Route 53 Azone ID
+* Replace public key with the public key of your Pem for the Remote Provisioner.
+* Replace Route 53 Zone ID
 * Replace Domain Name with your current domain
 * Replace SSL arn with current 
 
