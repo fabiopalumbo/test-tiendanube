@@ -25,9 +25,12 @@ https://www.terraform.io/docs/providers/aws/index.html
 Run with a command like this:
 
 ```
-terraform apply -var 'key_name={your_aws_key_name}' \
-   -var 'public_key_path={location_of_your_key_in_your_local_machine}'
+terraform apply -var 'public_key={your_ssh_public_key}' \
+   -var 'private_key_path={location_of_your_key_in_your_local_machine}' \
+   -var 'key_name={key_name}' \   
 ```
+
+r53_zoneid SSL_ARN needed to deploy route
 
 For example:
 
